@@ -10,7 +10,7 @@ def do_magic():
 # Для uwsgi:
 def application(env, start_response):
     start_response('200 OK', [('Content-Type','text/html')])
-    return [do_magic()]
+    return [do_magic().encode()]
 # Если мой файл включили как модуль, то он ниче не будет делать.
 if __name__ == "__main__":
     if 'REQUEST_URI' in os.environ:
