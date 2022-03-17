@@ -9,4 +9,5 @@ def do_magic():
 
 # Если мой файл включили как модуль, то он ниче не будет делать.
 if __name__ == "__main__":
+    print("Content-type: text/html\n\n")
     print(do_magic())
